@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C68865581B9E0EF400A2410B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865571B9E0EF400A2410B /* main.m */; };
 		C688655B1B9E0EF400A2410B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C688655A1B9E0EF400A2410B /* AppDelegate.m */; };
-		C688655E1B9E0EF400A2410B /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C688655D1B9E0EF400A2410B /* GameScene.m */; };
-		C68865601B9E0EF400A2410B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C688655F1B9E0EF400A2410B /* GameScene.sks */; };
-		C68865631B9E0EF400A2410B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865621B9E0EF400A2410B /* GameViewController.m */; };
+		C688655E1B9E0EF400A2410B /* WordScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C688655D1B9E0EF400A2410B /* WordScene.m */; };
+		C68865601B9E0EF400A2410B /* WordScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C688655F1B9E0EF400A2410B /* WordScene.sks */; };
+		C68865631B9E0EF400A2410B /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865621B9E0EF400A2410B /* WordViewController.m */; };
 		C68865661B9E0EF400A2410B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68865641B9E0EF400A2410B /* Main.storyboard */; };
 		C68865681B9E0EF400A2410B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68865671B9E0EF400A2410B /* Assets.xcassets */; };
 		C688656B1B9E0EF400A2410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */; };
@@ -44,11 +44,11 @@
 		C68865571B9E0EF400A2410B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C68865591B9E0EF400A2410B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C688655A1B9E0EF400A2410B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C688655C1B9E0EF400A2410B /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		C688655D1B9E0EF400A2410B /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		C688655F1B9E0EF400A2410B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		C68865611B9E0EF400A2410B /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		C68865621B9E0EF400A2410B /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C688655C1B9E0EF400A2410B /* WordScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordScene.h; sourceTree = "<group>"; };
+		C688655D1B9E0EF400A2410B /* WordScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordScene.m; sourceTree = "<group>"; };
+		C688655F1B9E0EF400A2410B /* WordScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WordScene.sks; sourceTree = "<group>"; };
+		C68865611B9E0EF400A2410B /* WordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
+		C68865621B9E0EF400A2410B /* WordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
 		C68865651B9E0EF400A2410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C68865671B9E0EF400A2410B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C688656A1B9E0EF400A2410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,23 +114,11 @@
 		C68865551B9E0EF400A2410B /* WordSpiral */ = {
 			isa = PBXGroup;
 			children = (
-				C68865591B9E0EF400A2410B /* AppDelegate.h */,
-				C688655A1B9E0EF400A2410B /* AppDelegate.m */,
-				C688655C1B9E0EF400A2410B /* GameScene.h */,
-				C688655D1B9E0EF400A2410B /* GameScene.m */,
-				C688655F1B9E0EF400A2410B /* GameScene.sks */,
-				C68865611B9E0EF400A2410B /* GameViewController.h */,
-				C68865621B9E0EF400A2410B /* GameViewController.m */,
-				C68865641B9E0EF400A2410B /* Main.storyboard */,
-				C68865671B9E0EF400A2410B /* Assets.xcassets */,
-				C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */,
-				C688656C1B9E0EF400A2410B /* Info.plist */,
+				C688659A1B9E210A00A2410B /* Documents */,
+				C68865961B9E20E800A2410B /* Model */,
 				C68865561B9E0EF400A2410B /* Supporting Files */,
-				C688658E1B9E0EFF00A2410B /* input.txt */,
-				C68865901B9E0F1700A2410B /* WordProcessor.h */,
-				C68865911B9E0F1700A2410B /* WordProcessor.m */,
-				C68865931B9E0F3E00A2410B /* Word.h */,
-				C68865941B9E0F3E00A2410B /* Word.m */,
+				C688659B1B9E211500A2410B /* UserInterface */,
+				C68865971B9E20EF00A2410B /* ViewController */,
 			);
 			path = WordSpiral;
 			sourceTree = "<group>";
@@ -138,6 +126,9 @@
 		C68865561B9E0EF400A2410B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C688656C1B9E0EF400A2410B /* Info.plist */,
+				C68865591B9E0EF400A2410B /* AppDelegate.h */,
+				C688655A1B9E0EF400A2410B /* AppDelegate.m */,
 				C68865571B9E0EF400A2410B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -159,6 +150,63 @@
 				C68865821B9E0EF400A2410B /* Info.plist */,
 			);
 			path = WordSpiralUITests;
+			sourceTree = "<group>";
+		};
+		C68865961B9E20E800A2410B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C68865901B9E0F1700A2410B /* WordProcessor.h */,
+				C68865911B9E0F1700A2410B /* WordProcessor.m */,
+				C68865931B9E0F3E00A2410B /* Word.h */,
+				C68865941B9E0F3E00A2410B /* Word.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C68865971B9E20EF00A2410B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C68865981B9E20F800A2410B /* Word */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C68865981B9E20F800A2410B /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				C68865991B9E20FD00A2410B /* Scene */,
+				C68865611B9E0EF400A2410B /* WordViewController.h */,
+				C68865621B9E0EF400A2410B /* WordViewController.m */,
+			);
+			name = Word;
+			sourceTree = "<group>";
+		};
+		C68865991B9E20FD00A2410B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C688655C1B9E0EF400A2410B /* WordScene.h */,
+				C688655D1B9E0EF400A2410B /* WordScene.m */,
+				C688655F1B9E0EF400A2410B /* WordScene.sks */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C688659A1B9E210A00A2410B /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				C688658E1B9E0EFF00A2410B /* input.txt */,
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
+		C688659B1B9E211500A2410B /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				C68865671B9E0EF400A2410B /* Assets.xcassets */,
+				C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */,
+				C68865641B9E0EF400A2410B /* Main.storyboard */,
+			);
+			name = UserInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68865601B9E0EF400A2410B /* GameScene.sks in Resources */,
+				C68865601B9E0EF400A2410B /* WordScene.sks in Resources */,
 				C688658F1B9E0EFF00A2410B /* input.txt in Resources */,
 				C688656B1B9E0EF400A2410B /* LaunchScreen.storyboard in Resources */,
 				C68865681B9E0EF400A2410B /* Assets.xcassets in Resources */,
@@ -293,10 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68865631B9E0EF400A2410B /* GameViewController.m in Sources */,
+				C68865631B9E0EF400A2410B /* WordViewController.m in Sources */,
 				C688655B1B9E0EF400A2410B /* AppDelegate.m in Sources */,
 				C68865921B9E0F1700A2410B /* WordProcessor.m in Sources */,
-				C688655E1B9E0EF400A2410B /* GameScene.m in Sources */,
+				C688655E1B9E0EF400A2410B /* WordScene.m in Sources */,
 				C68865581B9E0EF400A2410B /* main.m in Sources */,
 				C68865951B9E0F3E00A2410B /* Word.m in Sources */,
 			);

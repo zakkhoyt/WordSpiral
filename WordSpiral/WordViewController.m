@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Zakk Hoyt. All rights reserved.
 //
 
-#import "GameViewController.h"
-#import "GameScene.h"
+#import "WordViewController.h"
+#import "WordScene.h"
 #import "WordProcessor.h"
 
 
@@ -31,11 +31,11 @@
 
 @end
 
-@interface GameViewController ()
-@property (nonatomic, strong) GameScene *scene;
+@interface WordViewController ()
+@property (nonatomic, strong) WordScene *scene;
 @end
 
-@implementation GameViewController
+@implementation WordViewController
 
 - (void)viewDidLoad
 {
@@ -49,7 +49,7 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    self.scene = [GameScene unarchiveFromFile:@"GameScene"];
+    self.scene = [WordScene unarchiveFromFile:@"WordScene"];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
