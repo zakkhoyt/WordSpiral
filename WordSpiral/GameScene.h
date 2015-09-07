@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameScene : SKScene
-
+-(void)renderWords:(NSArray*)words;
 @end

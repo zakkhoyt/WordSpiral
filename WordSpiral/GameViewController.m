@@ -10,6 +10,8 @@
 #import "GameScene.h"
 #import "WordProcessor.h"
 
+
+
 @implementation SKScene (Unarchive)
 
 + (instancetype)unarchiveFromFile:(NSString *)file {
@@ -29,6 +31,10 @@
 
 @end
 
+@interface GameViewController ()
+@property (nonatomic, strong) GameScene *scene;
+@end
+
 @implementation GameViewController
 
 - (void)viewDidLoad
@@ -43,20 +49,21 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    self.scene = [GameScene unarchiveFromFile:@"GameScene"];
+    self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
-    [skView presentScene:scene];
+    [skView presentScene:self.scene];
     
-    [self readInputFile];
+    NSArray *words = [self readInputFile];
+    [self.scene renderWords:words];
 }
 
--(void)readInputFile{
+-(NSArray*)readInputFile{
     NSString* path = [[NSBundle mainBundle] pathForResource:@"input" ofType:@"txt"];
     NSArray *words = [WordProcessor countWordsInFileAtPath:path];
     NSLog(@"Counted %lu words: \n%@", words.count, words.description);
-
+    return words;
 }
 
 - (BOOL)shouldAutorotate

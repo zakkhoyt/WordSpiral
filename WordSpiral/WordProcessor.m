@@ -11,6 +11,7 @@
 
 @implementation WordProcessor
 
+
 +(NSArray*)countWordsInFileAtPath:(NSString*)path{
     NSError *error = nil;
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -47,10 +48,23 @@
                 return NSOrderedDescending;
             }
         }];
+        
+//        // Assign a font size based on count
+//        Word *firstWord = [ret firstObject];
+//        Word *lastWord = [ret lastObject];
+//        NSUInteger maxCount = firstWord.count;
+//        NSUInteger minCount = lastWord.count;
+//        CGFloat maxFontSize = 70;
+//        CGFloat minFontSize = 8;
+        [ret enumerateObjectsUsingBlock:^(Word *word, NSUInteger idx, BOOL * _Nonnull stop) {
+            CGFloat size = word.count * 4;
+            word.font =[UIFont fontWithName:@"Chalkduster" size:size];
+        }];
+        
+
         return ret;
     }
-    
-    
 }
+
 
 @end

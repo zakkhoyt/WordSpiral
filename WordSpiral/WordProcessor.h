@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface WordProcessor : NSObject
+
 +(NSArray*)countWordsInFileAtPath:(NSString*)path;
 @end
