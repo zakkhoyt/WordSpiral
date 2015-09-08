@@ -141,59 +141,121 @@
 #define DEGREES_TO_RADIANS(degrees)((M_PI * degrees)/180)
 
 -(CGPoint)findPlaceForWord:(Word*)word{
+//    // Starting at the center of our view, spiral outwards seeing if the rect intersects any other rect that's been layed out so far
+//    for(NSUInteger pixels = 0; pixels < self.view.frame.size.height / 2.0; pixels+=5){
+//        for(NSUInteger degrees = 0; degrees < 360; degrees+=5){
+//            CGFloat radians = DEGREES_TO_RADIANS(degrees);
+//            CGFloat x = CGRectGetMidX(self.frame);
+//            CGFloat y = CGRectGetMidY(self.frame);
+//            CGFloat xOffset = cos(radians);
+//            CGFloat yOffset = sin(radians);
+//            xOffset *= pixels;
+//            yOffset *= pixels;
+//            x += xOffset;
+//            y += yOffset;
+//
+//            // Check if this position and size intersect any in self.placedWords. If not, place it and return.
+//            CGRect proposedRect = CGRectMake(x - word.size.width / 2.0,
+//                                             y - word.size.height / 2.0,
+//                                             word.size.width,
+//                                             word.size.height);
+//            
+//            if(CGRectContainsRect(self.frame, proposedRect) == NO){
+//                continue;
+//            }
+//
+//            
+//            if(self.placedWords.count == 0){
+//                word.placedRect = proposedRect;
+//                [self.placedWords addObject:word];
+//                return CGPointMake(proposedRect.origin.x + proposedRect.size.width / 2.0,
+//                                   proposedRect.origin.y + proposedRect.size.height / 2.0);
+//            } else {
+//                // check if it intersects any work in self.placedWords
+//                __block BOOL found = YES;
+//                
+//                for(Word *placedWord in self.placedWords){
+//                    if(CGRectIntersectsRect(placedWord.placedRect, proposedRect) == YES){
+//                        found = NO;
+//                        break;
+//                    }
+//                }
+//                
+//                if(found == YES){
+//                    word.placedRect = proposedRect;
+//                    [self.placedWords addObject:word];
+//                    return CGPointMake(proposedRect.origin.x + proposedRect.size.width / 2.0,
+//                                       proposedRect.origin.y + proposedRect.size.height / 2.0);
+//                }
+//            }
+//        }
+//    }
+//
+//    
+//    //return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+//    return CGPointMake(10000, 10000);
+    
     // Starting at the center of our view, spiral outwards seeing if the rect intersects any other rect that's been layed out so far
-    for(NSUInteger pixels = 0; pixels < self.view.frame.size.height / 2.0; pixels+=5){
-        for(NSUInteger degrees = 0; degrees < 360; degrees+=5){
-            CGFloat radians = DEGREES_TO_RADIANS(degrees);
-            CGFloat x = CGRectGetMidX(self.frame);
-            CGFloat y = CGRectGetMidY(self.frame);
-            CGFloat xOffset = cos(radians);
-            CGFloat yOffset = sin(radians);
-            xOffset *= pixels;
-            yOffset *= pixels;
-            x += xOffset;
-            y += yOffset;
-
-            // Check if this position and size intersect any in self.placedWords. If not, place it and return.
-            CGRect proposedRect = CGRectMake(x - word.size.width / 2.0,
-                                             y - word.size.height / 2.0,
-                                             word.size.width,
-                                             word.size.height);
+//    for(NSUInteger pixels = 0; pixels < self.view.frame.size.height / 2.0; pixels+=5){
+//        for(NSUInteger degrees = 0; degrees < 360; degrees+=5){
+//            CGFloat radians = DEGREES_TO_RADIANS(degrees);
+//            CGFloat x = CGRectGetMidX(self.frame);
+//            CGFloat y = CGRectGetMidY(self.frame);
+//            CGFloat xOffset = cos(radians);
+//            CGFloat yOffset = sin(radians);
+//            xOffset *= pixels;
+//            yOffset *= pixels;
+//            x += xOffset;
+//            y += yOffset;
+    
+//    while (YES) {
+    for(NSUInteger index = 0; index < self.view.bounds.size.width * self.view.bounds.size.height; index++) {
+        NSUInteger xRand = arc4random() % (NSUInteger)self.frame.size.width;
+        NSUInteger yRand = arc4random() % (NSUInteger)self.frame.size.height;
+        CGFloat x = xRand;
+        CGFloat y = yRand;
+        
+        // Check if this position and size intersect any in self.placedWords. If not, place it and return.
+        CGRect proposedRect = CGRectMake(x - word.size.width / 2.0,
+                                         y - word.size.height / 2.0,
+                                         word.size.width,
+                                         word.size.height);
+        
+        if(CGRectContainsRect(self.frame, proposedRect) == NO){
+            continue;
+        }
+        
+        
+        if(self.placedWords.count == 0){
+            word.placedRect = proposedRect;
+            [self.placedWords addObject:word];
+            return CGPointMake(proposedRect.origin.x + proposedRect.size.width / 2.0,
+                               proposedRect.origin.y + proposedRect.size.height / 2.0);
+        } else {
+            // check if it intersects any work in self.placedWords
+            __block BOOL found = YES;
             
-            if(CGRectContainsRect(self.frame, proposedRect) == NO){
-                continue;
+            for(Word *placedWord in self.placedWords){
+                if(CGRectIntersectsRect(placedWord.placedRect, proposedRect) == YES){
+                    found = NO;
+                    break;
+                }
             }
-
             
-            if(self.placedWords.count == 0){
+            if(found == YES){
                 word.placedRect = proposedRect;
                 [self.placedWords addObject:word];
                 return CGPointMake(proposedRect.origin.x + proposedRect.size.width / 2.0,
                                    proposedRect.origin.y + proposedRect.size.height / 2.0);
-            } else {
-                // check if it intersects any work in self.placedWords
-                __block BOOL found = YES;
-                
-                for(Word *placedWord in self.placedWords){
-                    if(CGRectIntersectsRect(placedWord.placedRect, proposedRect) == YES){
-                        found = NO;
-                        break;
-                    }
-                }
-                
-                if(found == YES){
-                    word.placedRect = proposedRect;
-                    [self.placedWords addObject:word];
-                    return CGPointMake(proposedRect.origin.x + proposedRect.size.width / 2.0,
-                                       proposedRect.origin.y + proposedRect.size.height / 2.0);
-                }
             }
         }
+        //        }
+        //    }
     }
-
     
     //return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     return CGPointMake(10000, 10000);
+
 }
 
 @end
