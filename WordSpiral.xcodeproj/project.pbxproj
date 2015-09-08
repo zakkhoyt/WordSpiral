@@ -19,6 +19,9 @@
 		C688658F1B9E0EFF00A2410B /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = C688658E1B9E0EFF00A2410B /* input.txt */; };
 		C68865921B9E0F1700A2410B /* WordProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865911B9E0F1700A2410B /* WordProcessor.m */; };
 		C68865951B9E0F3E00A2410B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865941B9E0F3E00A2410B /* Word.m */; };
+		C6A9E8E21B9F92F60050FAFF /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A9E8E11B9F92F60050FAFF /* ActionViewController.m */; };
+		C6A9E8E41B9F92F60050FAFF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A9E8E31B9F92F60050FAFF /* MainInterface.storyboard */; };
+		C6A9E8E71B9F92F60050FAFF /* WordSpiralAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C6A9E8DC1B9F92F60050FAFF /* WordSpiralAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,28 @@
 			remoteGlobalIDString = C68865521B9E0EF400A2410B;
 			remoteInfo = WordSpiral;
 		};
+		C6A9E8E51B9F92F60050FAFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C688654B1B9E0EF400A2410B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6A9E8DB1B9F92F60050FAFF;
+			remoteInfo = WordSpiralAction;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6A9E8EB1B9F92F60050FAFF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C6A9E8E71B9F92F60050FAFF /* WordSpiralAction.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C68865531B9E0EF400A2410B /* WordSpiral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordSpiral.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +86,11 @@
 		C68865911B9E0F1700A2410B /* WordProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordProcessor.m; sourceTree = "<group>"; };
 		C68865931B9E0F3E00A2410B /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		C68865941B9E0F3E00A2410B /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		C6A9E8DC1B9F92F60050FAFF /* WordSpiralAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WordSpiralAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A9E8DF1B9F92F60050FAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6A9E8E01B9F92F60050FAFF /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		C6A9E8E11B9F92F60050FAFF /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		C6A9E8E31B9F92F60050FAFF /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +115,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6A9E8D91B9F92F60050FAFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +131,7 @@
 				C68865551B9E0EF400A2410B /* WordSpiral */,
 				C68865741B9E0EF400A2410B /* WordSpiralTests */,
 				C688657F1B9E0EF400A2410B /* WordSpiralUITests */,
+				C6A9E8DD1B9F92F60050FAFF /* WordSpiralAction */,
 				C68865541B9E0EF400A2410B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +142,7 @@
 				C68865531B9E0EF400A2410B /* WordSpiral.app */,
 				C68865711B9E0EF400A2410B /* WordSpiralTests.xctest */,
 				C688657C1B9E0EF400A2410B /* WordSpiralUITests.xctest */,
+				C6A9E8DC1B9F92F60050FAFF /* WordSpiralAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +244,25 @@
 			name = UserInterface;
 			sourceTree = "<group>";
 		};
+		C6A9E8DD1B9F92F60050FAFF /* WordSpiralAction */ = {
+			isa = PBXGroup;
+			children = (
+				C6A9E8E01B9F92F60050FAFF /* ActionViewController.h */,
+				C6A9E8E11B9F92F60050FAFF /* ActionViewController.m */,
+				C6A9E8E31B9F92F60050FAFF /* MainInterface.storyboard */,
+				C6A9E8DE1B9F92F60050FAFF /* Supporting Files */,
+			);
+			path = WordSpiralAction;
+			sourceTree = "<group>";
+		};
+		C6A9E8DE1B9F92F60050FAFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6A9E8DF1B9F92F60050FAFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,10 +273,12 @@
 				C688654F1B9E0EF400A2410B /* Sources */,
 				C68865501B9E0EF400A2410B /* Frameworks */,
 				C68865511B9E0EF400A2410B /* Resources */,
+				C6A9E8EB1B9F92F60050FAFF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C6A9E8E61B9F92F60050FAFF /* PBXTargetDependency */,
 			);
 			name = WordSpiral;
 			productName = WordSpiral;
@@ -262,6 +321,23 @@
 			productReference = C688657C1B9E0EF400A2410B /* WordSpiralUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C6A9E8DB1B9F92F60050FAFF /* WordSpiralAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6A9E8E81B9F92F60050FAFF /* Build configuration list for PBXNativeTarget "WordSpiralAction" */;
+			buildPhases = (
+				C6A9E8D81B9F92F60050FAFF /* Sources */,
+				C6A9E8D91B9F92F60050FAFF /* Frameworks */,
+				C6A9E8DA1B9F92F60050FAFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordSpiralAction;
+			productName = WordSpiralAction;
+			productReference = C6A9E8DC1B9F92F60050FAFF /* WordSpiralAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,6 +358,9 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = C68865521B9E0EF400A2410B;
 					};
+					C6A9E8DB1B9F92F60050FAFF = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = C688654E1B9E0EF400A2410B /* Build configuration list for PBXProject "WordSpiral" */;
@@ -300,6 +379,7 @@
 				C68865521B9E0EF400A2410B /* WordSpiral */,
 				C68865701B9E0EF400A2410B /* WordSpiralTests */,
 				C688657B1B9E0EF400A2410B /* WordSpiralUITests */,
+				C6A9E8DB1B9F92F60050FAFF /* WordSpiralAction */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +407,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6A9E8DA1B9F92F60050FAFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A9E8E41B9F92F60050FAFF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +450,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6A9E8D81B9F92F60050FAFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A9E8E21B9F92F60050FAFF /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,6 +470,11 @@
 			isa = PBXTargetDependency;
 			target = C68865521B9E0EF400A2410B /* WordSpiral */;
 			targetProxy = C688657D1B9E0EF400A2410B /* PBXContainerItemProxy */;
+		};
+		C6A9E8E61B9F92F60050FAFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6A9E8DB1B9F92F60050FAFF /* WordSpiralAction */;
+			targetProxy = C6A9E8E51B9F92F60050FAFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -547,6 +648,34 @@
 			};
 			name = Release;
 		};
+		C6A9E8E91B9F92F60050FAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = WordSpiralAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C6A9E8EA1B9F92F60050FAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WordSpiralAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,6 +714,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C6A9E8E81B9F92F60050FAFF /* Build configuration list for PBXNativeTarget "WordSpiralAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6A9E8E91B9F92F60050FAFF /* Debug */,
+				C6A9E8EA1B9F92F60050FAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -253,7 +253,7 @@
         //    }
     }
     
-    //return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    // Return a position somewhere far away. The right hting to do is check the return value and not add this node at all.
     return CGPointMake(10000, 10000);
 
 }
