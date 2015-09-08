@@ -62,11 +62,13 @@
             
             NSDictionary *attributes = @{NSFontAttributeName: word.font};
             CGSize size = [word.word sizeWithAttributes:attributes];
-            word.size = size;
+            const CGFloat kBorder = 4;
+            word.size = CGSizeMake(size.width + kBorder, size.height + kBorder);
         }];
         
 //        return [NSArray arrayWithObjects:ret[0], ret[1], ret[2], ret[3], ret[4], ret[5], nil];
 
+//        return [ret subarrayWithRange:NSMakeRange(0, 120)];
         return ret;
     }
 }

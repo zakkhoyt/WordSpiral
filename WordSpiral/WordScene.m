@@ -131,6 +131,7 @@
         myLabel.fontSize = word.font.pointSize;
         myLabel.name = word.word;
         myLabel.position = [self findPlaceForWord:word];
+
         [self addChild:myLabel];
 
     }];
@@ -141,8 +142,8 @@
 
 -(CGPoint)findPlaceForWord:(Word*)word{
     // Starting at the center of our view, spiral outwards seeing if the rect intersects any other rect that's been layed out so far
-    for(NSUInteger pixels = 0; pixels < self.view.frame.size.width / 2.0; pixels++){
-        for(NSUInteger degrees = 0; degrees < 360; degrees++){
+    for(NSUInteger pixels = 0; pixels < self.view.frame.size.height / 2.0; pixels+=5){
+        for(NSUInteger degrees = 0; degrees < 360; degrees+=5){
             CGFloat radians = DEGREES_TO_RADIANS(degrees);
             CGFloat x = CGRectGetMidX(self.frame);
             CGFloat y = CGRectGetMidY(self.frame);
@@ -158,6 +159,12 @@
                                              y - word.size.height / 2.0,
                                              word.size.width,
                                              word.size.height);
+            
+            if(CGRectContainsRect(self.frame, proposedRect) == NO){
+                continue;
+            }
+
+            
             if(self.placedWords.count == 0){
                 word.placedRect = proposedRect;
                 [self.placedWords addObject:word];
@@ -166,6 +173,7 @@
             } else {
                 // check if it intersects any work in self.placedWords
                 __block BOOL found = YES;
+                
                 for(Word *placedWord in self.placedWords){
                     if(CGRectIntersectsRect(placedWord.placedRect, proposedRect) == YES){
                         found = NO;
@@ -184,7 +192,8 @@
     }
 
     
-    return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    //return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    return CGPointMake(10000, 10000);
 }
 
 @end

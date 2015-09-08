@@ -51,7 +51,7 @@
     // Create and configure the scene.
     self.scene = [WordScene unarchiveFromFile:@"WordScene"];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
-    
+    self.scene.backgroundColor = [UIColor darkGrayColor];
     // Present the scene.
     [skView presentScene:self.scene];
     
