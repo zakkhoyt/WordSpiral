@@ -22,7 +22,7 @@
 
         NSArray* words = [content componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSMutableArray *ret = [[NSMutableArray alloc]initWithCapacity:words.count];
-        [words enumerateObjectsUsingBlock:^(NSString *_Nonnull word, NSUInteger idx, BOOL * _Nonnull stop) {
+        [words enumerateObjectsUsingBlock:^(NSString *word, NSUInteger idx, BOOL *stop) {
             
             if(word.length <= 3){
                 return ;
@@ -56,11 +56,16 @@
 //        NSUInteger minCount = lastWord.count;
 //        CGFloat maxFontSize = 70;
 //        CGFloat minFontSize = 8;
-        [ret enumerateObjectsUsingBlock:^(Word *word, NSUInteger idx, BOOL * _Nonnull stop) {
-            CGFloat size = word.count * 4;
-            word.font =[UIFont fontWithName:@"Chalkduster" size:size];
+        [ret enumerateObjectsUsingBlock:^(Word *word, NSUInteger idx, BOOL *stop) {
+            CGFloat pointSize = word.count * 4;
+            word.font =[UIFont fontWithName:@"Chalkduster" size:pointSize];
+            
+            NSDictionary *attributes = @{NSFontAttributeName: word.font};
+            CGSize size = [word.word sizeWithAttributes:attributes];
+            word.size = size;
         }];
         
+//        return [NSArray arrayWithObjects:ret[0], ret[1], ret[2], ret[3], ret[4], ret[5], nil];
 
         return ret;
     }

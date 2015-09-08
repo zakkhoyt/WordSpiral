@@ -15,4 +15,6 @@
 @property (nonatomic) NSUInteger count;
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, strong) UIColor *color;
+@property (nonatomic) CGSize size; // size calculated from the font and count
+@property (nonatomic) CGRect placedRect;
 @end

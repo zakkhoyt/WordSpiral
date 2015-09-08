@@ -14,7 +14,6 @@
 		C68865631B9E0EF400A2410B /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865621B9E0EF400A2410B /* WordViewController.m */; };
 		C68865661B9E0EF400A2410B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68865641B9E0EF400A2410B /* Main.storyboard */; };
 		C68865681B9E0EF400A2410B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68865671B9E0EF400A2410B /* Assets.xcassets */; };
-		C688656B1B9E0EF400A2410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */; };
 		C68865761B9E0EF400A2410B /* WordSpiralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865751B9E0EF400A2410B /* WordSpiralTests.m */; };
 		C68865811B9E0EF400A2410B /* WordSpiralUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C68865801B9E0EF400A2410B /* WordSpiralUITests.m */; };
 		C688658F1B9E0EFF00A2410B /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = C688658E1B9E0EFF00A2410B /* input.txt */; };
@@ -51,7 +50,6 @@
 		C68865621B9E0EF400A2410B /* WordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
 		C68865651B9E0EF400A2410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C68865671B9E0EF400A2410B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C688656A1B9E0EF400A2410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C688656C1B9E0EF400A2410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C68865711B9E0EF400A2410B /* WordSpiralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSpiralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68865751B9E0EF400A2410B /* WordSpiralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordSpiralTests.m; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				C68865671B9E0EF400A2410B /* Assets.xcassets */,
-				C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */,
 				C68865641B9E0EF400A2410B /* Main.storyboard */,
 			);
 			name = UserInterface;
@@ -314,7 +311,6 @@
 			files = (
 				C68865601B9E0EF400A2410B /* WordScene.sks in Resources */,
 				C688658F1B9E0EFF00A2410B /* input.txt in Resources */,
-				C688656B1B9E0EF400A2410B /* LaunchScreen.storyboard in Resources */,
 				C68865681B9E0EF400A2410B /* Assets.xcassets in Resources */,
 				C68865661B9E0EF400A2410B /* Main.storyboard in Resources */,
 			);
@@ -390,14 +386,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C68865691B9E0EF400A2410B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C688656A1B9E0EF400A2410B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -437,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -475,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordSpiral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordSpiral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +500,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WordSpiralTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiralTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +513,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WordSpiralTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiralTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WordSpiralUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiralUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WordSpiralUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.threefoldphotos.WordSpiralUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -572,6 +566,7 @@
 				C68865871B9E0EF400A2410B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C68865881B9E0EF400A2410B /* Build configuration list for PBXNativeTarget "WordSpiralTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +575,7 @@
 				C688658A1B9E0EF400A2410B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C688658B1B9E0EF400A2410B /* Build configuration list for PBXNativeTarget "WordSpiralUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +584,7 @@
 				C688658D1B9E0EF400A2410B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

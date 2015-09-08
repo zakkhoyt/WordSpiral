@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93804892-9B64-4BFA-8377-68CB6A23369A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WordSpiral</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D499733343B2D526F7866D99EA8FB330F9B2E160</key>
+		<string>github.com:zakkhoyt/WordSpiral.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WordSpiral.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D499733343B2D526F7866D99EA8FB330F9B2E160</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:zakkhoyt/WordSpiral.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D499733343B2D526F7866D99EA8FB330F9B2E160</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D499733343B2D526F7866D99EA8FB330F9B2E160</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WordSpiral</string>
+		</dict>
+	</array>
+</dict>
+</plist>
